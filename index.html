@@ -95,7 +95,7 @@
   --gutter:clamp(20px,5vw,40px);
 }
 /* Zonas escuras: o acento passa a rosé para ter contraste */
-.res-topo,.escuro,.rodape{--rosa:var(--rose);--rosa-escuro:var(--rose)}
+.res-topo,.escuro{--rosa:var(--rose);--rosa-escuro:var(--rose)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.65;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased;min-height:100svh}
@@ -371,11 +371,11 @@ em{font-style:italic;color:var(--rosa-escuro)}
   .linha{grid-template-columns:260px 1fr;gap:40px}
   .venda-grelha{grid-template-columns:1.1fr .9fr;gap:80px}
 }
-.assinatura{font-family:var(--serif);font-style:italic;font-size:1.05rem;letter-spacing:0;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(217,138,156,.5);padding-bottom:1px;transition:color .25s,border-color .25s}
+.assinatura{font-family:var(--serif);font-style:italic;font-size:1.05rem;letter-spacing:0;color:var(--tinta);text-decoration:none;border-bottom:1px solid rgba(128,0,32,.35);padding-bottom:1px;transition:color .25s,border-color .25s}
 .assinatura:hover{color:var(--rosa);border-color:var(--rosa)}
-.assinatura-final{background:var(--tinta);text-align:center;padding:clamp(48px,7vw,80px) 0 8px}
-.logo-fecho{width:clamp(150px,18vw,210px);height:auto;display:inline-block}
-.rodape{padding:28px 0 calc(28px + env(safe-area-inset-bottom));text-align:center;font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.06em;background:var(--tinta)}
+.assinatura-final{background:var(--nevoa);text-align:center;padding:clamp(64px,9vw,104px) var(--gutter) clamp(28px,4vw,40px)}
+.logo-fecho{width:clamp(190px,24vw,280px);height:auto;display:inline-block}
+.rodape{padding:20px var(--gutter) calc(32px + env(safe-area-inset-bottom));text-align:center;font-size:.7rem;color:var(--tinta-suave);letter-spacing:.06em;background:var(--nevoa)}
 
 .revela{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .revela.visto{opacity:1;transform:none}
@@ -619,7 +619,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
     <p><strong>Avaliação criada por Mafalda Almeida</strong>, Liderança &amp; Poder Pessoal.</p>
     <p>Quando sentires que é o momento: curso <em id="printCurso"></em>, em <span id="printLink"></span></p>
   </div>
-  <div class="assinatura-final"><img class="logo-fecho" src="logo-mafalda.png" width="634" height="243" alt="Mafalda Almeida, Liderança e Poder Pessoal" loading="lazy"></div>
+  <div class="assinatura-final"><img class="logo-fecho" src="logo-mafalda.png" width="774" height="290" alt="Mafalda Almeida, Liderança e Poder Pessoal" loading="lazy"></div>
   <footer class="rodape">© <span id="ano"></span> Mafalda Almeida · Design e desenvolvimento: <a class="assinatura" href="https://www.instagram.com/ogrupocado/" target="_blank" rel="noopener">Grupo Cado</a></footer>
 </section>
 
