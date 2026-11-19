@@ -117,7 +117,7 @@ img{display:block;max-width:100%}
 
 /* ---------- Logo da Mafalda: só no fecho da página de resultado ---------- */
 .logo{display:block;height:auto}
-.logo-capa{width:clamp(132px,14vw,176px)}
+.logo-capa{width:clamp(136px,13vw,180px)}
 .logo-topo{width:104px}
 .logo-res{width:clamp(132px,14vw,176px);margin-bottom:clamp(48px,8vw,88px)}
 .print-only{display:none}
@@ -150,7 +150,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
    Ecrã largo: duas colunas, texto à esquerda e retrato à direita. */
 #capa{background:var(--papel);color:var(--tinta);position:relative;overflow:hidden}
 .capa-topo{position:absolute;top:0;left:0;right:0;z-index:3;padding:22px var(--gutter) 0}
-.capa-foto{position:relative;margin-top:24px;height:min(56svh,108vw);min-height:340px;background:#fff}
+.capa-foto{position:relative;margin-top:84px;height:min(56svh,108vw);min-height:340px;background:#fff}
 .capa-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 .capa-foto::after{content:"";position:absolute;inset:auto 0 0 0;height:28%;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)}
 .capa-texto{position:relative;z-index:2;margin-top:-40px;padding-bottom:44px}
@@ -428,6 +428,9 @@ em{font-style:italic;color:var(--rosa-escuro)}
 <!-- ============ 1. CAPA ============ -->
 <section id="capa" class="ecra ativo" aria-labelledby="t-capa">
   <div class="capa-foto"><img id="fotoCapa" src="mafalda.jpg" alt="" fetchpriority="high"></div>
+  <div class="capa-topo">
+    <img class="logo logo-capa" src="logo-mafalda.png" width="774" height="290" alt="Mafalda Almeida, Liderança e Poder Pessoal">
+  </div>
   <div class="miolo capa-texto">
     <p class="eyebrow">Avaliação · 3 minutos</p>
     <h1 id="t-capa">Descobre porque é que o teu chefe <em>não te vê.</em></h1>
