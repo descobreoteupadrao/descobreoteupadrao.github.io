@@ -1,0 +1,10 @@
+.env*
+!.env.example
+*.pem
+*.key
+credentials*.json
+apps-script.gs
+node_modules/
+.DS_Store
+_teste*.html
+.impeccable/
