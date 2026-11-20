@@ -289,6 +289,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
 .ecos li{position:relative;background:#fff;border:1px solid var(--filete);border-radius:4px;padding:56px 28px 28px;font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,1.8vw,1.35rem);line-height:1.45}
 .ecos li::before{content:"\201C";position:absolute;top:10px;left:24px;font-family:var(--serif);font-style:normal;font-size:3.4rem;line-height:1;color:var(--rosa)}
 .ecos-intro{display:none}
+.cortado{display:none!important} /* blocos tirados do resultado para encurtar a página (o JS continua a preenchê-los) */
 
 .custos{display:grid;gap:16px}
 .custo{padding:26px 24px 28px;background:#fff;border:1px solid var(--filete);border-top:2px solid var(--rosa);border-radius:2px 2px 4px 4px}
@@ -528,13 +529,13 @@ em{font-style:italic;color:var(--rosa-escuro)}
 
   <div class="res-corpo">
     <div class="res-largo">
-      <div class="bloco-r revela" id="b-respostas" style="margin-top:0">
+      <div class="bloco-r revela cortado" id="b-respostas" style="margin-top:0">
         <p class="eyebrow">Escolheste frases como estas</p>
         <p class="ecos-intro"></p>
         <ul class="ecos" id="r-respostas"></ul>
       </div>
 
-      <div class="bloco-r revela">
+      <div class="bloco-r revela" style="margin-top:0">
         <p class="eyebrow">O que isto te pode estar a custar</p>
         <div class="custos" id="r-custos"></div>
       </div>
@@ -551,12 +552,12 @@ em{font-style:italic;color:var(--rosa-escuro)}
           <div class="ling"><i aria-hidden="true">S</i><span>Estável</span></div>
           <div class="ling"><i aria-hidden="true">C</i><span>Conforme</span></div>
         </div>
-        <p class="ling-texto">Cada pessoa ouve, decide e reage segundo um perfil comportamental. Quando falas com o teu chefe na linguagem do perfil errado, a tua mensagem perde-se pelo caminho, por mais competente que sejas e por mais razão que tenhas.</p>
+        <p class="ling-texto cortado">Cada pessoa ouve, decide e reage segundo um perfil comportamental. Quando falas com o teu chefe na linguagem do perfil errado, a tua mensagem perde-se pelo caminho, por mais competente que sejas e por mais razão que tenhas.</p>
         <p class="ling-pergunta">Em qual destes quatro está o teu chefe? <em>Consegues dizer com certeza?</em></p>
       </div>
     </div>
 
-    <div class="faixa-perguntas perguntas-ti">
+    <div class="faixa-perguntas perguntas-ti cortado">
       <div class="res-largo revela">
         <p class="eyebrow">Três perguntas para ti</p>
         <ol id="r-perguntas"></ol>
@@ -564,7 +565,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
       </div>
     </div>
 
-    <div class="res-largo">
+    <div class="res-largo cortado">
       <div class="bloco-r revela forca-grelha">
         <div class="forca-cartao"><span>A tua força</span><p id="r-forca"></p></div>
         <div class="forca-cartao secundario"><span>O teu segundo padrão</span><p id="r-secundario"></p></div>
