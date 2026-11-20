@@ -521,7 +521,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
 
 <!-- ============ 5. RESULTADO ============ -->
 <section id="resultado" class="ecra">
-  <header class="res-topo">
+  <header class="res-topo" id="resTopo">
     <div class="res-largo">
       <div class="res-grelha">
         <div class="revela res-cab">
@@ -533,10 +533,6 @@ em{font-style:italic;color:var(--rosa-escuro)}
           <h3>Mapa da tua relação com a chefia</h3>
           <div id="barras"></div>
         </div>
-      </div>
-      <div class="cta-cedo revela" id="ctaCedo">
-        <p>Já sabes qual é o teu padrão. No curso, a Mafalda mostra-te como <em>ler o teu chefe e mudar a forma como ele te vê.</em></p>
-        <a class="btn btn-rosa js-checkout" href="#">Quero perceber o meu chefe <span class="seta" aria-hidden="true">→</span></a>
       </div>
     </div>
   </header>
@@ -999,7 +995,7 @@ function desenhaResultado(){
   document.querySelectorAll(".js-checkout").forEach(a => a.href = url.toString());
 }
 
-// Barra fixa no telemóvel: aparece depois de passar o CTA de cima, some quando a oferta está à vista
+// Barra fixa no telemóvel: aparece depois de passar o topo do resultado, some quando a oferta está à vista
 let barraLigada = false;
 function ligaBarraCompra(){
   if (barraLigada || !("IntersectionObserver" in window)) return;
@@ -1007,12 +1003,12 @@ function ligaBarraCompra(){
   const barra = $("barraCompra"), vis = {cedo:true, oferta:false, passou:false};
   const io = new IntersectionObserver(ents => {
     ents.forEach(en => {
-      if (en.target.id === "ctaCedo") { vis.cedo = en.isIntersecting; if (!en.isIntersecting && en.boundingClientRect.top < 0) vis.passou = true; }
+      if (en.target.id === "resTopo") { vis.cedo = en.isIntersecting; if (!en.isIntersecting && en.boundingClientRect.top < 0) vis.passou = true; }
       else vis.oferta = en.isIntersecting;
     });
     barra.classList.toggle("visivel", vis.passou && !vis.cedo && !vis.oferta);
   });
-  io.observe($("ctaCedo")); io.observe($("oferta"));
+  io.observe($("resTopo")); io.observe($("oferta"));
 }
 
 document.querySelectorAll(".js-checkout").forEach(a => a.addEventListener("click", () => {
