@@ -299,7 +299,22 @@ em{font-style:italic;color:var(--rosa-escuro)}
 .barra-compra{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--tinta);border-top:1px solid rgba(255,255,255,.12);transform:translateY(110%);transition:transform .4s var(--ease)}
 .barra-compra.visivel{transform:none}
 .barra-compra .btn{min-height:54px;font-size:.98rem;letter-spacing:.01em;text-transform:none}
-@media (min-width:860px){.barra-compra{display:none}} /* blocos tirados do resultado para encurtar a página (o JS continua a preenchê-los) */
+@media (min-width:860px){.barra-compra{display:none}}
+/* Bloco de venda: colunas alinhadas em cima, título mais contido, oferta em cartão claro para saltar à vista */
+.venda-grelha{align-items:start!important}
+.venda h2{font-size:clamp(1.6rem,2.8vw,2.2rem)!important;max-width:22ch!important;margin:18px 0 28px!important}
+.escuro .oferta{background:#fff;color:var(--tinta);border:0;border-radius:6px;padding:40px 30px 30px;box-shadow:0 0 0 1px rgba(217,138,156,.35),0 30px 80px -30px rgba(217,138,156,.55)}
+.escuro .oferta .preco-rotulo{color:var(--bordo);font-weight:600}
+.escuro .oferta .oferta-nome{color:var(--tinta)}
+.escuro .oferta .btn{min-height:68px;font-size:1.08rem;font-weight:700;box-shadow:0 16px 34px -14px rgba(128,0,32,.7)}
+.escuro .oferta .btn-rosa::before{background:var(--tinta)}
+.escuro .oferta .btn-rosa:hover{color:#fff}
+.escuro .oferta .seguro{color:rgba(15,15,15,.55)}
+.escuro .oferta .links-discretos{color:rgba(15,15,15,.3)}
+.escuro .oferta .partilhar{color:rgba(15,15,15,.55)}
+.escuro .oferta .partilhar:hover{color:var(--tinta)}
+.escuro .oferta .aviso-copia{color:var(--bordo)}
+.barra-compra .btn{background:var(--rose);color:var(--tinta);font-weight:700} /* blocos tirados do resultado para encurtar a página (o JS continua a preenchê-los) */
 
 .custos{display:grid;gap:16px}
 .custo{padding:26px 24px 28px;background:#fff;border:1px solid var(--filete);border-top:2px solid var(--rosa);border-radius:2px 2px 4px 4px}
@@ -589,11 +604,11 @@ em{font-style:italic;color:var(--rosa-escuro)}
         <div class="venda revela">
           <p class="eyebrow">O teu próximo passo</p>
           <h2 id="v-titulo"></h2>
-          <p class="v-intro">Disseste que, daqui a um ano, o que mais te pesaria era</p>
-          <p class="eco-medo" id="v-medo"></p>
-          <p class="v-intro">E que, com o teu chefe, o que mais gostavas de conseguir era</p>
+          <p class="v-intro cortado">Disseste que, daqui a um ano, o que mais te pesaria era</p>
+          <p class="eco-medo cortado" id="v-medo"></p>
+          <p class="v-intro">Disseste que, com o teu chefe, o que mais gostavas de conseguir era</p>
           <p class="desejo" id="v-desejo"></p>
-          <p class="v-ponte" id="r-ponte"></p>
+          <p class="v-ponte cortado" id="r-ponte"></p>
         </div>
         <div>
           <div class="oferta revela" id="oferta">
