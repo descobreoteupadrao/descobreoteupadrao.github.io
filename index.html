@@ -166,13 +166,15 @@ em{font-style:italic;color:var(--rosa-escuro)}
 .capa-curso{display:flex;gap:10px;align-items:baseline;margin-top:30px;padding-top:18px;border-top:1px solid var(--filete);font-size:.78rem;color:var(--tinta-suave);line-height:1.5}
 .capa-curso b{color:var(--bordo);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.66rem;white-space:nowrap}
 @media (min-width:860px){
-  #capa.ativo{display:grid;grid-template-columns:1.1fr .9fr;min-height:100svh}
+  #capa.ativo{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
   .capa-topo{padding:32px clamp(32px,5vw,72px) 0;right:auto}
-  .capa-texto{grid-column:1;grid-row:1;margin:0;align-self:center;max-width:600px;justify-self:end;padding:120px clamp(32px,5vw,72px) 80px}
+  .capa-texto{grid-column:1;grid-row:1;margin:0;align-self:center;max-width:620px;justify-self:end;padding:72px clamp(24px,3vw,48px) 56px clamp(32px,5vw,72px)}
   .capa-texto .btn{max-width:360px}
   .capa-texto .micro{max-width:360px}
-  .capa-foto{grid-column:2;grid-row:1;margin-top:0;height:auto;min-height:100svh}
-  .capa-foto img{position:absolute;inset:0;object-fit:cover;object-position:50% 20%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%),linear-gradient(0deg,transparent,#000 22%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 30%),linear-gradient(0deg,transparent,#000 22%);mask-composite:intersect}
+  .capa-foto{grid-column:2;grid-row:1;margin-top:0;height:auto;min-height:100svh;overflow:hidden}
+  /* Escurece o fundo claro da foto nas margens para se fundir com o azul-noite */
+  .capa-foto::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,9,16,.5) 0%,rgba(6,9,16,0) 30%,rgba(6,9,16,0) 70%,rgba(6,9,16,.6) 100%),linear-gradient(270deg,rgba(6,9,16,.55) 0%,rgba(6,9,16,0) 30%)}
+  .capa-foto img{position:absolute;top:0;bottom:0;left:-26%;width:126%;max-width:none;height:100%;object-fit:cover;object-position:50% 18%;filter:brightness(.92);-webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 48%),linear-gradient(0deg,transparent,#000 22%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 18%,#000 48%),linear-gradient(0deg,transparent,#000 22%);mask-composite:intersect}
 }
 
 /* ---------- 2. Perguntas ----------
