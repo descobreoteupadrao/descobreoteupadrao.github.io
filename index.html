@@ -376,7 +376,8 @@ em{font-style:italic;color:var(--rosa-escuro)}
 .partilhar{display:inline-block;margin-top:18px;background:none;border:0;color:rgba(255,255,255,.62);font-size:.85rem;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;cursor:pointer;padding:8px}
 .partilhar:hover{color:#fff}
 .aviso-copia{font-size:.8rem;color:var(--rosa);min-height:1.2em;margin-top:4px}
-.viver{margin-top:28px}
+.viver{margin-top:clamp(48px,6vw,72px)}
+@media (min-width:900px){.venda-lado{position:sticky;top:32px}}
 .viver h2{margin:16px 0 22px}
 .lista{list-style:none;counter-reset:n}
 .lista li{counter-increment:n;display:grid;grid-template-columns:40px 1fr;gap:6px;padding:16px 0;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.86)}
@@ -613,8 +614,13 @@ em{font-style:italic;color:var(--rosa-escuro)}
           <p class="v-intro">Disseste que, com o teu chefe, o que mais gostavas de conseguir era</p>
           <p class="desejo" id="v-desejo"></p>
           <p class="v-ponte cortado" id="r-ponte"></p>
+            <div class="viver revela" id="blocoViver">
+              <p class="eyebrow">No curso</p>
+              <h2>O que vais <em>aprender.</em></h2>
+              <ul class="lista" id="listaViver"></ul>
+            </div>
         </div>
-        <div>
+        <div class="venda-lado">
           <div class="oferta revela" id="oferta">
             <p class="preco-rotulo">Curso online</p>
             <p class="oferta-nome" id="nomeCurso"></p>
@@ -623,11 +629,6 @@ em{font-style:italic;color:var(--rosa-escuro)}
             <p class="seguro">Pagamento seguro através da Hotmart.</p>
             <p class="links-discretos"><button class="partilhar" id="btnPartilhar" type="button">Partilhar o meu resultado</button><span aria-hidden="true">·</span><button class="partilhar" id="btnPdf" type="button">Guardar em PDF</button></p>
             <p class="aviso-copia" id="avisoCopia" aria-live="polite"></p>
-          </div>
-          <div class="viver revela" id="blocoViver">
-            <p class="eyebrow">No curso</p>
-            <h2>O que vais <em>aprender.</em></h2>
-            <ul class="lista" id="listaViver"></ul>
           </div>
         </div>
       </div>
