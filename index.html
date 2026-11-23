@@ -155,7 +155,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
 .capa-texto h1::after{content:"";display:block;width:min(220px,60%);height:1px;margin-top:22px;background:linear-gradient(90deg,transparent,#F6CF6E 45%,transparent);box-shadow:0 0 12px 1px rgba(246,207,110,.45)}
 .capa-texto h1 em{font-style:normal;color:var(--bordo)}
 .capa-topo{position:absolute;top:0;left:0;right:0;z-index:3;padding:22px var(--gutter) 0}
-.capa-foto{position:relative;margin-top:84px;height:min(56svh,108vw);min-height:340px;background:transparent}
+.capa-foto{position:relative;margin-top:0;height:min(56svh,108vw);min-height:340px;background:transparent}
 .capa-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 14%;-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent);mask-image:linear-gradient(180deg,#000 62%,transparent)}
 .capa-foto::after{content:none}
 .capa-texto{position:relative;z-index:2;margin-top:-40px;padding-bottom:44px}
@@ -403,10 +403,9 @@ em{font-style:italic;color:var(--rosa-escuro)}
 }
 .assinatura{font-family:var(--serif);font-style:italic;font-size:1.05rem;letter-spacing:0;color:var(--tinta);text-decoration:none;border-bottom:1px solid rgba(227,165,40,.4);padding-bottom:1px;transition:color .25s,border-color .25s}
 .assinatura:hover{color:var(--rosa);border-color:var(--rosa)}
-.assinatura-final{background:#F4EFE6;text-align:center;padding:clamp(64px,9vw,104px) var(--gutter) clamp(28px,4vw,40px)}
-.logo-fecho{width:clamp(190px,24vw,280px);height:auto;display:inline-block}
-.rodape{padding:20px var(--gutter) calc(32px + env(safe-area-inset-bottom));text-align:center;font-size:.7rem;color:#55504F;letter-spacing:.06em;background:#F4EFE6}
-.rodape .assinatura{color:#0F0F0F;border-color:rgba(128,0,32,.35)}
+.assinatura-final{background:var(--noite);border-top:1px solid var(--filete);text-align:center;padding:clamp(48px,7vw,72px) var(--gutter) clamp(20px,3vw,28px)}
+.logo-fecho{width:clamp(130px,14vw,160px);opacity:.9;height:auto;display:inline-block}
+.rodape{padding:20px var(--gutter) calc(32px + env(safe-area-inset-bottom));text-align:center;font-size:.7rem;color:var(--tinta-suave);letter-spacing:.06em;background:var(--noite)}
 
 .revela{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .revela.visto{opacity:1;transform:none}
@@ -462,9 +461,6 @@ em{font-style:italic;color:var(--rosa-escuro)}
 <!-- ============ 1. CAPA ============ -->
 <section id="capa" class="ecra ativo" aria-labelledby="t-capa">
   <div class="capa-foto"><img id="fotoCapa" src="mafalda.jpg" alt="" fetchpriority="high"></div>
-  <div class="capa-topo">
-    <img class="logo logo-capa" src="logo-mafalda.png" width="774" height="290" alt="Mafalda Almeida, Liderança e Poder Pessoal">
-  </div>
   <div class="miolo capa-texto">
     <p class="eyebrow">Avaliação · 3 minutos</p>
     <h1 id="t-capa">Descobre porque é que o teu chefe <em>não te vê.</em></h1>
@@ -657,7 +653,7 @@ em{font-style:italic;color:var(--rosa-escuro)}
     <p>Quando sentires que é o momento: curso <em id="printCurso"></em>, em <span id="printLink"></span></p>
   </div>
   <div class="barra-compra" id="barraCompra"><a class="btn btn-rosa js-checkout" href="#">Quero perceber o meu chefe <span class="seta" aria-hidden="true">→</span></a></div>
-  <div class="assinatura-final"><img class="logo-fecho" src="logo-mafalda.png" width="774" height="290" alt="Mafalda Almeida, Liderança e Poder Pessoal" loading="lazy"></div>
+  <div class="assinatura-final"><img class="logo-fecho" src="logo-mafalda-claro.png" width="774" height="290" alt="Mafalda Almeida, Liderança e Poder Pessoal" loading="lazy"></div>
   <footer class="rodape">© <span id="ano"></span> Mafalda Almeida · Design e desenvolvimento: <a class="assinatura" href="https://www.instagram.com/ogrupocado/" target="_blank" rel="noopener">Grupo Cado</a></footer>
 </section>
 
